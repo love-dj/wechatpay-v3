@@ -6,7 +6,7 @@
 ## 安装
 
 ```
-composer require love-dj/wechatpay-v3 dev-master
+composer require love-dj/wechatpay-v3
 ```
 
 ### 敏感参数加解密
