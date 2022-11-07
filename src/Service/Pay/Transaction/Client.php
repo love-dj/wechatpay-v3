@@ -45,6 +45,20 @@ class Client extends BaseClient
     }
 
     /**
+     * @param array $params
+     * @param array $options
+     * @return array
+     * @throws GuzzleException
+     * @throws ResultException
+     */
+    public function app(array $params, array $options = []): array
+    {
+        $url = self::classUrl() . '/app';
+        $options = $options + ['json' => $params];
+        return $this->request('POST', $url, $options);
+    }
+
+    /**
      * @param $appId
      * @param $prepayId
      * @param $subMerchantId
